@@ -13,7 +13,10 @@ local bypasses = {
     [5] = "i hate gays",
     [6] = "fuck you",
     [7] = "pick some cotton blackass coon",
-    [8] = "kill yourself"
+    [8] = "kill yourself",
+    [9] = "gas all jews",
+    [10] = "santa isnt real",
+    [11] = "anal sex"
 }
 
 local bypassesLegit = {
@@ -24,7 +27,10 @@ local bypassesLegit = {
     [5] = "i hate gâ€¢â€¢â€¢â€¢â€¢â€¢aâ€¢yâ€¢s",
     [6] = "fâ€¢â€¢â€¢â€¢â€¢â€¢uâ€¢câ€¢kâ€¢ you",
     [7] = "â€¢pâ€¢iâ€¢câ€¢kâ€¢ some â€¢câ€¢oâ€¢tâ€¢tâ€¢oâ€¢nâ€¢ â€¢bâ€¢lâ€¢aâ€¢câ€¢kâ€¢aâ€¢sâ€¢sâ€¢ â€¢câ€¢oâ€¢oâ€¢nâ€¢",
-    [8] = "â€¢kâ€¢iâ€¢lâ€¢lâ€¢ â€¢yâ€¢oâ€¢uâ€¢râ€¢sâ€¢eâ€¢lâ€¢fâ€¢"
+    [8] = "â€¢kâ€¢iâ€¢lâ€¢lâ€¢ â€¢yâ€¢oâ€¢uâ€¢râ€¢sâ€¢eâ€¢lâ€¢fâ€¢",
+    [9] = "â€¢gâ€¢aâ€¢sâ€¢ â€¢aâ€¢lâ€¢lâ€¢ â€¢jâ€¢eâ€¢wâ€¢sâ€¢",
+    [10] = "â€¢sâ€¢aâ€¢nâ€¢tâ€¢aâ€¢ isnt â€¢râ€¢eâ€¢aâ€¢lâ€¢",
+    [11] = "eat a shotgun â€¢fâ€¢aâ€¢gâ€¢",
 }
 
 local unlegitConversionTableUpper = {
@@ -235,5 +241,26 @@ local BypassButtonEight = BypassesTab:CreateButton({
    Name = "kill yourself",
    Callback = function()
             bypassPressed(8)
+   end,
+})
+
+local BypassButtonNine = BypassesTab:CreateButton({
+   Name = "gas all jews",
+   Callback = function()
+            bypassPressed(9)
+   end,
+})
+
+local BypassButtonTen = BypassesTab:CreateButton({
+   Name = "santa isnt real",
+   Callback = function()
+            bypassPressed(10)
+   end,
+})
+
+local BypassButtonEleven = BypassesTab:CreateButton({
+   Name = "anal sex",
+   Callback = function()
+            bypassPressed(11)
    end,
 })
