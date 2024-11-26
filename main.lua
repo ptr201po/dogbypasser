@@ -1,4 +1,27 @@
+-- ptr201po // dogbypasser
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local textChatService = game:GetService('TextChatService')
+
+local method = 1
+local autoBypass = 1 -- 1 is no 2 is yes
+
+local fixTaggingMessage = "Hi123hi345!@("
+
+
+
+local function sendMessage(message)
+    
+end
+
+local function fixTagging()
+    if textChatService.ChatInputBarConfiguration.TargetTextChannel then
+        textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(fixTaggingMessage)
+    else
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(fixTaggingMessage, "All")
+    end
+end
 
 local Window = Rayfield:CreateWindow({
    Name = "dog bypasser",
@@ -65,6 +88,6 @@ local Toggle = MainTab:CreateToggle({
 local Button = MainTab:CreateButton({
    Name = "Fix Tagging",
    Callback = function()
-   -- The function that takes place when the button is pressed
+            fixTagging()
    end,
 })
