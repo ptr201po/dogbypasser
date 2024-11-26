@@ -16,7 +16,7 @@ local bypasses = {
     [8] = "kill yourself",
     [9] = "gas all jews",
     [10] = "santa isnt real",
-    [11] = "anal sex"
+    [11] = "eat a shotgun fag"
 }
 
 local bypassesLegit = {
@@ -259,7 +259,7 @@ local BypassButtonTen = BypassesTab:CreateButton({
 })
 
 local BypassButtonEleven = BypassesTab:CreateButton({
-   Name = "anal sex",
+   Name = "eat a shotgun fag",
    Callback = function()
             bypassPressed(11)
    end,
