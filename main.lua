@@ -16,7 +16,13 @@ local bypasses = {
     [8] = "kill yourself",
     [9] = "gas all jews",
     [10] = "santa isnt real",
-    [11] = "eat a shotgun fag"
+    [11] = "eat a shotgun fag",
+    [12] = "i just wanna fuck you so bad mommy",
+    [13] = "wanna fuck?",
+    [14] = "fuck fuck fuck",
+    [15] = "im jerking off to ur roblox avatar rn",
+    [16] = "i love smoking crack",
+    [17] = "ok nigger"
 }
 
 local bypassesLegit = {
@@ -31,6 +37,13 @@ local bypassesLegit = {
     [9] = "â€¢gâ€¢aâ€¢sâ€¢ â€¢aâ€¢lâ€¢lâ€¢ â€¢jâ€¢eâ€¢wâ€¢sâ€¢",
     [10] = "â€¢sâ€¢aâ€¢nâ€¢tâ€¢aâ€¢ isnt â€¢râ€¢eâ€¢aâ€¢lâ€¢",
     [11] = "eat a shotgun â€¢fâ€¢aâ€¢gâ€¢",
+    [12] = "i just wanna â€¢fâ€¢uâ€¢câ€¢kâ€¢ you so bad mommy",
+    [13] = "wanna fâ€¢â€¢â€¢â€¢â€¢â€¢uâ€¢câ€¢kâ€¢?",
+    [14] = "fâ€¢â€¢â€¢â€¢â€¢â€¢uâ€¢câ€¢kâ€¢ fâ€¢â€¢â€¢â€¢â€¢â€¢uâ€¢câ€¢kâ€¢ fâ€¢â€¢â€¢â€¢â€¢â€¢uâ€¢câ€¢kâ€¢",
+    [15] = "im â€¢jâ€¢eâ€¢râ€¢kâ€¢iâ€¢nâ€¢g off to ur roblox avatar rn",
+    [16] = "i love â€¢sâ€¢mâ€¢oâ€¢kâ€¢iâ€¢nâ€¢gâ€¢ câ€¢râ€¢aâ€¢câ€¢kâ€¢",
+    [17] = "oâ€¢kâ€¢ nâ€¢iâ€¢gâ€¢â€¢â€¢.gâ€¢eâ€¢râ€¢â€¢"
+    
 }
 
 local unlegitConversionTableUpper = {
@@ -86,7 +99,7 @@ local function bypassPressed(number)
         else
             -- Replace dot with a zero-width space (\u{200B})
             if char == "." then
-                result = result .. "\u{200D}" .. "\u{200E}" .. "\u{200C}" .. "\u{2063}"
+                result = result .. "\u{0020}"  -- .. "\b"
             else
                 result = result .. char
             end
@@ -148,7 +161,7 @@ local Window = Rayfield:CreateWindow({
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "dogbypasser loader",
       Subtitle = ".gg/dogbypasser",
@@ -262,5 +275,47 @@ local BypassButtonEleven = BypassesTab:CreateButton({
    Name = "eat a shotgun fag",
    Callback = function()
             bypassPressed(11)
+   end,
+})
+
+local BypassButtonTwelve = BypassesTab:CreateButton({
+   Name = "i wanna fuck you so bad mommy",
+   Callback = function()
+            bypassPressed(12)
+   end,
+})
+
+local BypassButtonThirteen = BypassesTab:CreateButton({
+   Name = "wanna fuck?",
+   Callback = function()
+            bypassPressed(13)
+   end,
+})
+
+local BypassButtonFourteen = BypassesTab:CreateButton({
+   Name = "fuck fuck fuck",
+   Callback = function()
+            bypassPressed(14)
+   end,
+})
+
+local BypassButtonFifthteen = BypassesTab:CreateButton({
+   Name = "im jerking off to ur roblox avatar rn",
+   Callback = function()
+            bypassPressed(15)
+   end,
+})
+
+local BypassButtonSixteen = BypassesTab:CreateButton({
+   Name = "i love smoking crack",
+   Callback = function()
+            bypassPressed(16)
+   end,
+})
+
+local BypassButtonSeventeen = BypassesTab:CreateButton({
+   Name = "ok nigger",
+   Callback = function()
+            bypassPressed(17)
    end,
 })
